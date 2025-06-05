@@ -60,6 +60,7 @@ public class PilaUsers {
         return data;
     }
     
+    //METODO PARA VERIFICAR USUARIOS Y SUS CONTRASENAS 
     public boolean check(String n, int p){
         NodoUsers aux = head;
         while(aux != null){
@@ -71,14 +72,4 @@ public class PilaUsers {
         return false;
     }
     
-    public NodoUsers getUserByName(String nombre) {
-    NodoUsers aux = head;
-    while (aux != null) {
-        if (aux.getName().equals(nombre)) {
-            return aux;
-        }
-        aux = aux.getNext();
-    }
-    return null; // No encontrado
-    }
 }
