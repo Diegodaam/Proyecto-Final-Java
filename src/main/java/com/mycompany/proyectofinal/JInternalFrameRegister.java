@@ -4,6 +4,12 @@
  */
 package com.mycompany.proyectofinal;
 
+import java.awt.Cursor;
+import java.awt.Point;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Diego
@@ -24,6 +30,20 @@ public class JInternalFrameRegister extends javax.swing.JInternalFrame {
     public JInternalFrameRegister(PilaUsers pilaUsers) {
         initComponents();
         this.pila = pilaUsers;
+        
+        ImageIcon img = new ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\Cursores\\Cursor2.png");
+        
+        Cursor c;
+        
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        c = tk.createCustomCursor(img.getImage(), new Point(1,1), null);
+        
+        jButtonRegister.setCursor(c);
+        jScrollBar1.setCursor(c);
+        
+        jRadioButtonMale.setCursor(c);
+        jRadioButtonFemale.setCursor(c);
+        jRadioButtonOther.setCursor(c);
     }
 
     /**
@@ -58,12 +78,24 @@ public class JInternalFrameRegister extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
 
+        jTextFieldName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNameActionPerformed(evt);
+            }
+        });
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Registro");
 
         jLabel2.setText("Nombre (Nombre de usuario):");
 
         jLabel3.setText("Apellido:");
+
+        jTextFieldLastName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldLastNameActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Edad:");
 
@@ -98,6 +130,17 @@ public class JInternalFrameRegister extends javax.swing.JInternalFrame {
         });
 
         jLabel6.setText("Contrasena:");
+
+        jTextFieldPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldPasswordActionPerformed(evt);
+            }
+        });
+        jTextFieldPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldPasswordKeyTyped(evt);
+            }
+        });
 
         jLabelAge.setText("0");
 
@@ -216,6 +259,28 @@ public class JInternalFrameRegister extends javax.swing.JInternalFrame {
     private void jScrollBar1AdjustmentValueChanged(java.awt.event.AdjustmentEvent evt) {//GEN-FIRST:event_jScrollBar1AdjustmentValueChanged
         jLabelAge.setText(String.valueOf(jScrollBar1.getValue()));
     }//GEN-LAST:event_jScrollBar1AdjustmentValueChanged
+
+    private void jTextFieldNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNameActionPerformed
+        jTextFieldLastName.requestFocus();
+    }//GEN-LAST:event_jTextFieldNameActionPerformed
+
+    private void jTextFieldLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLastNameActionPerformed
+        jTextFieldPassword.requestFocus();
+    }//GEN-LAST:event_jTextFieldLastNameActionPerformed
+
+    private void jTextFieldPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldPasswordActionPerformed
+
+    private void jTextFieldPasswordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldPasswordKeyTyped
+        char c = evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            evt.consume();
+        }
+        if(jTextFieldPassword.getText().length() >= 4){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextFieldPasswordKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

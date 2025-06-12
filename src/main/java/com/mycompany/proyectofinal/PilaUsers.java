@@ -1,6 +1,8 @@
 
 package com.mycompany.proyectofinal;
 
+import javax.swing.JOptionPane;
+
 public class PilaUsers {
     public NodoUsers head;
     
@@ -63,12 +65,18 @@ public class PilaUsers {
     //METODO PARA VERIFICAR USUARIOS Y SUS CONTRASENAS 
     public boolean check(String n, int p){
         NodoUsers aux = head;
+        if(aux == null){
+                JOptionPane.showMessageDialog(null, "Ningun usuario registrado");               
+            }
         while(aux != null){
             if(aux.getName().equals(n) && aux.getPassword() == p){
                 return true;
+            }else{
+                JOptionPane.showMessageDialog(null, "Usuario incorrecto");
             }
             aux = aux.getNext();
         }
+        
         return false;
     }
     

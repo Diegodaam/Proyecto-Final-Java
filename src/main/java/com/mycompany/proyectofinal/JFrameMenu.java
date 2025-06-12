@@ -4,6 +4,11 @@
  */
 package com.mycompany.proyectofinal;
 
+import java.awt.Cursor;
+import java.awt.Point;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Diego
@@ -15,6 +20,22 @@ public class JFrameMenu extends javax.swing.JFrame {
      */
     public JFrameMenu() {
         initComponents();
+        
+        ImageIcon img = new ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\Cursores\\Cursor2.png");
+        
+        Cursor c;
+        
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        c = tk.createCustomCursor(img.getImage(), new Point(1,1), null);
+        
+        jMenuCalAverage.setCursor(c);
+        jMenuAgenda.setCursor(c);
+        jMenuCarts.setCursor(c);
+        
+        jMenuItemRegisterSubject.setCursor(c);
+        jMenuItemReport.setCursor(c);
+        jMenuItemRecomendation.setCursor(c);
+
     }
 
     /**
@@ -26,31 +47,105 @@ public class JFrameMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenuCalAverage = new javax.swing.JMenu();
+        jMenuItemRegisterSubject = new javax.swing.JMenuItem();
+        jMenuItemReport = new javax.swing.JMenuItem();
+        jMenuItemRecomendation = new javax.swing.JMenuItem();
+        jMenuAgenda = new javax.swing.JMenu();
+        jMenuCarts = new javax.swing.JMenu();
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenu3.setText("File");
+        jMenuBar2.add(jMenu3);
+
+        jMenu4.setText("Edit");
+        jMenuBar2.add(jMenu4);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("MENU");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\Logotipo.png")); // NOI18N
+
+        jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(48, 48, 48))
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jMenuCalAverage.setText("Calculadora de promedio");
+
+        jMenuItemRegisterSubject.setText("Registrar materia");
+        jMenuItemRegisterSubject.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemRegisterSubjectActionPerformed(evt);
+            }
+        });
+        jMenuCalAverage.add(jMenuItemRegisterSubject);
+
+        jMenuItemReport.setText("Reporte");
+        jMenuCalAverage.add(jMenuItemReport);
+
+        jMenuItemRecomendation.setText("Recomendaciones");
+        jMenuCalAverage.add(jMenuItemRecomendation);
+
+        jMenuBar1.add(jMenuCalAverage);
+
+        jMenuAgenda.setText("Agenda academica");
+        jMenuBar1.add(jMenuAgenda);
+
+        jMenuCarts.setText("Cartas de estudio");
+        jMenuBar1.add(jMenuCarts);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(94, 94, 94)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(269, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(jLabel1)
-                .addContainerGap(169, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemRegisterSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRegisterSubjectActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemRegisterSubjectActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,6 +183,19 @@ public class JFrameMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenuAgenda;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenu jMenuCalAverage;
+    private javax.swing.JMenu jMenuCarts;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItemRecomendation;
+    private javax.swing.JMenuItem jMenuItemRegisterSubject;
+    private javax.swing.JMenuItem jMenuItemReport;
     // End of variables declaration//GEN-END:variables
 }
