@@ -61,6 +61,7 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuItemRecomendation = new javax.swing.JMenuItem();
         jMenuAgenda = new javax.swing.JMenu();
         jMenuCarts = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -75,8 +76,6 @@ public class JFrameMenu extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("MENU");
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\Logotipo.png")); // NOI18N
 
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -125,6 +124,15 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuBar1.add(jMenuAgenda);
 
         jMenuCarts.setText("Cartas de estudio");
+
+        jMenuItem2.setText("Agregar preguntas");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenuCarts.add(jMenuItem2);
+
         jMenuBar1.add(jMenuCarts);
 
         setJMenuBar(jMenuBar1);
@@ -146,6 +154,13 @@ public class JFrameMenu extends javax.swing.JFrame {
     private void jMenuItemRegisterSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRegisterSubjectActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemRegisterSubjectActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        PreguntasUI v1 = new PreguntasUI();
+        jDesktopPane1.add(v1);
+        v1.show();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,6 +209,7 @@ public class JFrameMenu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuCalAverage;
     private javax.swing.JMenu jMenuCarts;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItemRecomendation;
     private javax.swing.JMenuItem jMenuItemRegisterSubject;
     private javax.swing.JMenuItem jMenuItemReport;
