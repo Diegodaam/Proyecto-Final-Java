@@ -23,11 +23,12 @@ public class JFrameLogin extends javax.swing.JFrame {
     
     public JFrameLogin() {
         initComponents();
+        
         this.pila = new PilaUsers();
         
         //IMAGEN DEL CURSOR 
         
-        ImageIcon img = new ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\Cursores\\Cursor2.png");
+        ImageIcon img = new ImageIcon("Cursor2.png");
         
         Cursor c;
         
@@ -43,7 +44,7 @@ public class JFrameLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         // Icono para la aplicación
-        setIconImage(new ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\LogotipoGrande.png").getImage());
+        //setIconImage(new ImageIcon(getClass().getResource("/Recursor/LogotipoGrande.png")).getImage());
 
         setVisible(true);
     }
@@ -268,7 +269,11 @@ public class JFrameLogin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFrameLogin().setVisible(true);
+                JFrameLogin v1 = new JFrameLogin();
+                v1.setVisible(true); //Permite ver la ventana
+                v1.setLocationRelativeTo(null); //Centra la ventana en la pantalla del usuario
+         
+                
             }
         });
     }
