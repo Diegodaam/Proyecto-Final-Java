@@ -25,6 +25,8 @@ public class JFrameLogin extends javax.swing.JFrame {
         initComponents();
         this.pila = new PilaUsers();
         
+        //IMAGEN DEL CURSOR 
+        
         ImageIcon img = new ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\Cursores\\Cursor2.png");
         
         Cursor c;
@@ -34,6 +36,16 @@ public class JFrameLogin extends javax.swing.JFrame {
         
         jButtonRegister.setCursor(c);
         jButtonSignIn.setCursor(c);
+        
+        ////////////////Titulo de la aplicacion//////////////////////////////
+        
+        setTitle("EduPlanner");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        // Icono para la aplicación
+        setIconImage(new ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\LogotipoGrande.png").getImage());
+
+        setVisible(true);
     }
     
 
@@ -105,7 +117,7 @@ public class JFrameLogin extends javax.swing.JFrame {
 
         jLabelMessage.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\Logotipo.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\LogotipoLetrasBlancas.png")); // NOI18N
 
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jTextFieldUser, javax.swing.JLayeredPane.DEFAULT_LAYER);
