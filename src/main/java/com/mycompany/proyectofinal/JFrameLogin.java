@@ -118,8 +118,6 @@ public class JFrameLogin extends javax.swing.JFrame {
 
         jLabelMessage.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\LogotipoLetrasBlancas.png")); // NOI18N
-
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jTextFieldUser, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -149,12 +147,10 @@ public class JFrameLogin extends javax.swing.JFrame {
                             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                                 .addGap(56, 56, 56)
                                 .addComponent(jLabel1))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
+                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
                                 .addComponent(jButtonRegister)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButtonSignIn)
-                                .addGap(14, 14, 14)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonSignIn)))
                         .addGap(21, 21, 21))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
