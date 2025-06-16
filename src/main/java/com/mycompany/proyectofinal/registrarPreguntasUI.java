@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyectofinal;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Derek
@@ -26,7 +28,14 @@ public class registrarPreguntasUI extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jTmateria = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jTpreguntas = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTrespuetas = new javax.swing.JTextField();
+        jBguardar = new javax.swing.JButton();
+        jBguardar1 = new javax.swing.JButton();
 
         setBorder(new javax.swing.border.MatteBorder(null));
         setClosable(true);
@@ -35,30 +44,127 @@ public class registrarPreguntasUI extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setTitle("Registrar Preguntas");
 
-        jLabel1.setText("Preguntas");
+        jLabel2.setText("Materia");
+
+        jTmateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTmateriaActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Pregunta");
+
+        jTpreguntas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTpreguntasActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Respuesta");
+
+        jTrespuetas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTrespuetasActionPerformed(evt);
+            }
+        });
+
+        jBguardar.setText("Mostrar");
+
+        jBguardar1.setText("Guardar");
+        jBguardar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBguardar1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(144, 144, 144)
-                .addComponent(jLabel1)
-                .addContainerGap(196, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTmateria, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTpreguntas, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTrespuetas, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jBguardar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBguardar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(91, 91, 91)
-                .addComponent(jLabel1)
-                .addContainerGap(167, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTmateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTpreguntas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTrespuetas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBguardar1)
+                    .addComponent(jBguardar))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTmateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTmateriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTmateriaActionPerformed
+
+    private void jTpreguntasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTpreguntasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTpreguntasActionPerformed
+
+    private void jTrespuetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTrespuetasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTrespuetasActionPerformed
+
+    private void jBguardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBguardar1ActionPerformed
+        // TODO add your handling code here:
+        //Guardar datos
+        String materia = jTmateria.getText();
+        String pregunta = jTpreguntas.getText();
+        String respuesta = jTrespuetas.getText();
+        
+        //Validar que pregunta y respuesta tengan algo antes de guardar la pregunta
+        if(materia.isEmpty()&& pregunta.isEmpty() && respuesta.isEmpty()){
+            JOptionPane.showMessageDialog(this,"¡Error! Completa Pregunta y Respuesta.","Campos vacíos",JOptionPane.ERROR_MESSAGE);
+        }else if(materia.isEmpty()|| pregunta.isEmpty() || respuesta.isEmpty()){
+            JOptionPane.showMessageDialog(this,"¡Error! Completa Pregunta y Respuesta.","Registro de pregunta ERRONEO",JOptionPane.ERROR_MESSAGE);
+        }else{
+                JOptionPane.showMessageDialog(this,"¡Pregunta guardada ETSITOSAMENTE.","Registro de pregunta",JOptionPane.INFORMATION_MESSAGE);
+                jTpreguntas.setText("");
+        jTrespuetas.setText("");
+        }
+        
+    }//GEN-LAST:event_jBguardar1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jBguardar;
+    private javax.swing.JButton jBguardar1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField jTmateria;
+    private javax.swing.JTextField jTpreguntas;
+    private javax.swing.JTextField jTrespuetas;
     // End of variables declaration//GEN-END:variables
 }
