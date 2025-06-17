@@ -79,6 +79,7 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuItemReport = new javax.swing.JMenuItem();
         jMenuItemRecomendation = new javax.swing.JMenuItem();
         jMenuAgenda = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenuCarts = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
@@ -98,8 +99,6 @@ public class JFrameMenu extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("MENU");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Derek\\Desktop\\proyecto poe ahora si\\Proyecto-Final-Java\\src\\Recursor\\LogotipoLetrasBlancas.png")); // NOI18N
-
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -117,13 +116,14 @@ public class JFrameMenu extends javax.swing.JFrame {
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(107, 107, 107)
+                        .addComponent(jLabel1)))
                 .addContainerGap(78, Short.MAX_VALUE))
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(107, 107, 107)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jMenuCalAverage.setText("Calculadora de promedio");
@@ -145,6 +145,15 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuBar1.add(jMenuCalAverage);
 
         jMenuAgenda.setText("Agenda academica");
+
+        jMenuItem4.setText("Registro");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenuAgenda.add(jMenuItem4);
+
         jMenuBar1.add(jMenuAgenda);
 
         jMenuCarts.setText("Cartas de estudio");
@@ -190,6 +199,12 @@ public class JFrameMenu extends javax.swing.JFrame {
         vRegistrasPreguntas.show();
         
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        MenuAgenda Registros = new MenuAgenda();
+        this.setVisible(false); //escondo ventana de menu
+        Registros.setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -240,6 +255,7 @@ public class JFrameMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItemRecomendation;
     private javax.swing.JMenuItem jMenuItemRegisterSubject;
     private javax.swing.JMenuItem jMenuItemReport;
