@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyectofinal;
 
+import com.mycompany.proyectofinal.ListSubject;
+
 import java.awt.Cursor;
 import java.awt.Point;
 import java.awt.Toolkit;
@@ -14,6 +16,8 @@ import javax.swing.ImageIcon;
  * @author Diego
  */
 public class JFrameMenu extends javax.swing.JFrame {
+
+    private ListSubject list = new ListSubject(null, 0);
 
     /**
      * Creates new form JFrameMenu
@@ -36,7 +40,7 @@ public class JFrameMenu extends javax.swing.JFrame {
         
         jMenuItemRegisterSubject.setCursor(c);
         jMenuItemReport.setCursor(c);
-        jMenuItemRecomendation.setCursor(c);
+       // jMenuItemRecomendation.setCursor(c);
         
         ////////////////Titulo de la aplicacion//////////////////////////////
         
@@ -63,6 +67,7 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -70,7 +75,6 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuCalAverage = new javax.swing.JMenu();
         jMenuItemRegisterSubject = new javax.swing.JMenuItem();
         jMenuItemReport = new javax.swing.JMenuItem();
-        jMenuItemRecomendation = new javax.swing.JMenuItem();
         jMenuAgenda = new javax.swing.JMenu();
         jMenuCarts = new javax.swing.JMenu();
 
@@ -82,13 +86,24 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenu4.setText("Edit");
         jMenuBar2.add(jMenu4);
 
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 82, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 84, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("MENU");
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\LogotipoLetrasBlancas.png")); // NOI18N
 
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -98,11 +113,11 @@ public class JFrameMenu extends javax.swing.JFrame {
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(43, 43, 43))
+                .addGap(17, 17, 17)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(146, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,7 +127,7 @@ public class JFrameMenu extends javax.swing.JFrame {
                         .addGap(46, 46, 46)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
+                        .addGap(96, 96, 96)
                         .addComponent(jLabel1)))
                 .addContainerGap(79, Short.MAX_VALUE))
         );
@@ -127,11 +142,13 @@ public class JFrameMenu extends javax.swing.JFrame {
         });
         jMenuCalAverage.add(jMenuItemRegisterSubject);
 
-        jMenuItemReport.setText("Reporte");
+        jMenuItemReport.setText("Reporte y Recomendaciones");
+        jMenuItemReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemReportActionPerformed(evt);
+            }
+        });
         jMenuCalAverage.add(jMenuItemReport);
-
-        jMenuItemRecomendation.setText("Recomendaciones");
-        jMenuCalAverage.add(jMenuItemRecomendation);
 
         jMenuBar1.add(jMenuCalAverage);
 
@@ -164,6 +181,15 @@ public class JFrameMenu extends javax.swing.JFrame {
         jDesktopPane1.add(registerSubject);
         registerSubject.show();
     }//GEN-LAST:event_jMenuItemRegisterSubjectActionPerformed
+
+    private void jMenuItemReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReportActionPerformed
+     
+        Reporte reporteFrame = new Reporte(list);
+       jDesktopPane1.add(reporteFrame);
+    reporteFrame.setVisible(true);
+        
+        
+    }//GEN-LAST:event_jMenuItemReportActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,6 +228,7 @@ public class JFrameMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu3;
@@ -212,7 +239,6 @@ public class JFrameMenu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuCalAverage;
     private javax.swing.JMenu jMenuCarts;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItemRecomendation;
     private javax.swing.JMenuItem jMenuItemRegisterSubject;
     private javax.swing.JMenuItem jMenuItemReport;
     // End of variables declaration//GEN-END:variables

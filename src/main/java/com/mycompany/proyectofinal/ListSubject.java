@@ -5,10 +5,12 @@ public class ListSubject {
     public NodoSubjects head;
     private int cantNodos;
 
-    public ListSubject(NodoSubjects head, int cantNodos) {
+   public ListSubject(NodoSubjects head, int cantNodos) {
         head = null;
         cantNodos = 0;
     }
+
+    
     
     //METODO PARA AGREGAR MATERIAS 
     public void add(String s, String t, float p1, float p2, float p3){
