@@ -39,7 +39,7 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuCarts.setCursor(c);
         
         jMenuItemRegisterSubject.setCursor(c);
-        jMenuItemReport.setCursor(c);
+//        jMenuItemReport.setCursor(c);
        // jMenuItemRecomendation.setCursor(c);
         
         ////////////////Titulo de la aplicacion//////////////////////////////
@@ -74,7 +74,6 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuCalAverage = new javax.swing.JMenu();
         jMenuItemRegisterSubject = new javax.swing.JMenuItem();
-        jMenuItemReport = new javax.swing.JMenuItem();
         jMenuAgenda = new javax.swing.JMenu();
         jMenuCarts = new javax.swing.JMenu();
 
@@ -142,14 +141,6 @@ public class JFrameMenu extends javax.swing.JFrame {
         });
         jMenuCalAverage.add(jMenuItemRegisterSubject);
 
-        jMenuItemReport.setText("Reporte y Recomendaciones");
-        jMenuItemReport.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemReportActionPerformed(evt);
-            }
-        });
-        jMenuCalAverage.add(jMenuItemReport);
-
         jMenuBar1.add(jMenuCalAverage);
 
         jMenuAgenda.setText("Agenda academica");
@@ -181,15 +172,6 @@ public class JFrameMenu extends javax.swing.JFrame {
         jDesktopPane1.add(registerSubject);
         registerSubject.show();
     }//GEN-LAST:event_jMenuItemRegisterSubjectActionPerformed
-
-    private void jMenuItemReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReportActionPerformed
-     
-        Reporte reporteFrame = new Reporte(list);
-       jDesktopPane1.add(reporteFrame);
-    reporteFrame.setVisible(true);
-        
-        
-    }//GEN-LAST:event_jMenuItemReportActionPerformed
 
     /**
      * @param args the command line arguments
@@ -240,6 +222,5 @@ public class JFrameMenu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuCarts;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemRegisterSubject;
-    private javax.swing.JMenuItem jMenuItemReport;
     // End of variables declaration//GEN-END:variables
 }
