@@ -4,6 +4,7 @@
  */
 package com.mycompany.proyectofinal;
 
+import com.mycompany.proyectofinal.ListaPreguntas;
 import java.awt.Cursor;
 import java.awt.Point;
 import java.awt.Toolkit;
@@ -15,11 +16,16 @@ import javax.swing.ImageIcon;
  */
 public class JFrameMenu extends javax.swing.JFrame {
 
+    private ListaPreguntas listaPreguntas = new ListaPreguntas();
+
     /**
      * Creates new form JFrameMenu
      */
     public JFrameMenu() {
         initComponents();
+        
+        //Declarar la lista enlazada para que siempre este disponible
+        
         
         //IMAGEN DEL CURSOR 
 
@@ -63,6 +69,7 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -73,6 +80,7 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuItemRecomendation = new javax.swing.JMenuItem();
         jMenuAgenda = new javax.swing.JMenu();
         jMenuCarts = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -82,13 +90,15 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenu4.setText("Edit");
         jMenuBar2.add(jMenu4);
 
+        jMenuItem3.setText("jMenuItem3");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("MENU");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\LogotipoLetrasBlancas.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Derek\\Desktop\\proyecto poe ahora si\\Proyecto-Final-Java\\src\\Recursor\\LogotipoLetrasBlancas.png")); // NOI18N
 
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -98,23 +108,22 @@ public class JFrameMenu extends javax.swing.JFrame {
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addContainerGap(79, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addGap(43, 43, 43))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addComponent(jLabel1)))
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addGap(47, 47, 47)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(78, Short.MAX_VALUE))
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addGap(107, 107, 107)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jMenuCalAverage.setText("Calculadora de promedio");
@@ -139,6 +148,15 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuBar1.add(jMenuAgenda);
 
         jMenuCarts.setText("Cartas de estudio");
+
+        jMenuItem2.setText("Agregar preguntas");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenuCarts.add(jMenuItem2);
+
         jMenuBar1.add(jMenuCarts);
 
         setJMenuBar(jMenuBar1);
@@ -164,6 +182,14 @@ public class JFrameMenu extends javax.swing.JFrame {
         jDesktopPane1.add(registerSubject);
         registerSubject.show();
     }//GEN-LAST:event_jMenuItemRegisterSubjectActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+          registrarPreguntasUI vRegistrasPreguntas = new registrarPreguntasUI();
+        jDesktopPane1.add(vRegistrasPreguntas);
+        vRegistrasPreguntas.show();
+        
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,6 +238,8 @@ public class JFrameMenu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuCalAverage;
     private javax.swing.JMenu jMenuCarts;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItemRecomendation;
     private javax.swing.JMenuItem jMenuItemRegisterSubject;
     private javax.swing.JMenuItem jMenuItemReport;
