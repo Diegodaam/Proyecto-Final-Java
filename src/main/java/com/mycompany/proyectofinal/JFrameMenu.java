@@ -72,6 +72,7 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuItemReport = new javax.swing.JMenuItem();
         jMenuItemRecomendation = new javax.swing.JMenuItem();
         jMenuAgenda = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenuCarts = new javax.swing.JMenu();
 
         jMenuItem1.setText("jMenuItem1");
@@ -87,8 +88,6 @@ public class JFrameMenu extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("MENU");
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\ProyectoFinal\\src\\Recursor\\LogotipoLetrasBlancas.png")); // NOI18N
 
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -136,6 +135,15 @@ public class JFrameMenu extends javax.swing.JFrame {
         jMenuBar1.add(jMenuCalAverage);
 
         jMenuAgenda.setText("Agenda academica");
+
+        jMenuItem2.setText("Registros ");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenuAgenda.add(jMenuItem2);
+
         jMenuBar1.add(jMenuAgenda);
 
         jMenuCarts.setText("Cartas de estudio");
@@ -164,6 +172,12 @@ public class JFrameMenu extends javax.swing.JFrame {
         jDesktopPane1.add(registerSubject);
         registerSubject.show();
     }//GEN-LAST:event_jMenuItemRegisterSubjectActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        MenuAgenda Registros = new MenuAgenda();
+        this.setVisible(false); //escondo ventana de menu
+        Registros.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,6 +226,7 @@ public class JFrameMenu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuCalAverage;
     private javax.swing.JMenu jMenuCarts;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItemRecomendation;
     private javax.swing.JMenuItem jMenuItemRegisterSubject;
     private javax.swing.JMenuItem jMenuItemReport;
