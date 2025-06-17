@@ -153,7 +153,7 @@ private void ajustarAnchoColumnas() {
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 20, 550, 180);
+        jScrollPane1.setBounds(20, 20, 550, 110);
 
         jButton1.setText("Recomendacion");
         jButton1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -167,7 +167,7 @@ private void ajustarAnchoColumnas() {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(200, 220, 140, 30);
+        jButton1.setBounds(220, 140, 140, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
